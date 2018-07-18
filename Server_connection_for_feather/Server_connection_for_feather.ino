@@ -1,10 +1,10 @@
-#include <ESP8266WiFi.h>
+#include <ESP8266WiFi.h> //Includes the library ESP8266WiFi.h into the sketch
 
-const char* ssid    = "Parth";
-  const char* password= "12345654321";
-const char* host = "wifitest.adafruit.com";
+const char* ssid    = "Parth";// Set the ssid to be Parth
+  const char* password= "12345654321"; //Set the password to be 12345654321
+const char* host = "wifitest.adafruit.com"; //Set the host to be wifitest.adafruit.com
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(115200);//Set bit rate transfer/second to be 115200
   delay(100);
 
   Serial.println();
@@ -12,8 +12,10 @@ void setup() {
   Serial.print("Connecting to ");
   Serial.println(ssid);
 
+  //Initializes the wifi network library
   WiFi.begin(ssid, password);
 
+  //Loop is performed while Wifi.status() is not connected
   while (WiFi.status() != WL_CONNECTED) {
   delay(5000);
   Serial.print(".");

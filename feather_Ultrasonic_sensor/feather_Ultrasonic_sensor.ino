@@ -14,14 +14,14 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite (trigPin, LOW);
+  digitalWrite (trigPin, LOW);//Sets pin trigPin as low
   delayMicroseconds(2);
 
-  digitalWrite(trigPin, HIGH);
+  digitalWrite(trigPin, HIGH);//Sets pin trigPin as HIGH
   delayMicroseconds(10);
-  digitalWrite (trigPin, LOW);
+  digitalWrite (trigPin, LOW); //Sets pin trigPin as LOW
 
-  duration = pulseIn(echoPin, HIGH);
+  duration = pulseIn(echoPin, HIGH); //pulseIn reads a pulse as high or low on a pin
 
   distance= duration*0.034/2;
 
